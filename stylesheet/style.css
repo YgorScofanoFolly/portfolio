@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #EFEFEF;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0px auto;
+}
+
+.flex-condition-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #335277;
+    height: auto;
+}
+
+.main_title {
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    font-size: 1.12em;
+    margin: 0px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu_item:first-child {
+    margin-right: 28px;
+}
+
+.menu_item {
+    color: #FEFEFE;
+    font-size: 1.06em;
+    font-weight: 400;
+}
+
+.intro {
+    background-image: url('../img_src/background/bg_intro.svg');
+    background-repeat: no-repeat;
+    background-position: 177px 32px;
+    height: auto;
+    margin-top: 133px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 746px;
+}
+
+.left_introduction {
+    margin-top: 86px;
+}
+
+.intro_title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.75em;
+    max-width: 283px;
+    line-height: 33.6px;
+    color: #335277;
+    margin: 0px;
+}
+
+.my_photo {
+    width: 240px;
+    height: 240px;
+}
+
+.my_name {
+    font-family: 'Poppins', sans-serif;
+    color: #7AA873;
+    font-weight: 700;
+}
+
+.info_intro {
+    font-weight: 400;
+    font-size: 1.06em;
+    color: #252525;
+    max-width: 267px;
+    display: block;
+    margin-top: 12px;
+}
+
+.contact {
+    margin: 41px auto 0px auto;
+    font-size: 1.06em;
+    display: block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #252525;
+}
+
+.banner {
+    background-image: url('../img_src/background/code.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 940px;
+    height: 293px;
+    margin-top: 136px;
+}
+
+.more_info {
+    max-width: 460px;
+}
+
+.info_title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #252525;
+    margin: 79px 0px 54px 0px;
+    max-width: 460px;
+    text-align: center;
+}
+
+.info {
+    color: #000;
+    max-width: 458px;
+    line-height: 33.6px;
+}
+
+.footer {
+    padding: 19px 0px;
+    background-color: #335277;
+    margin-top: 202px;
+}
+
+.copy {
+    margin: 0px auto;
+    max-width: 120px;
+    font-size: 1em;
+    color: #FEFEFE;
+}
+
+.right {
+    text-align: right;
+}
+
+@media (max-width: 940px) {
+    .container {
+        max-width: 460px;
+    }
+
+    .intro {
+        flex-direction: column;
+        background-image: url('../img_src/background/bg_intro_tablet.svg');
+        background-position: 241px 0px;
+        height: 516px;
+        align-items: flex-start;
+    }
+
+    .my_photo {
+        margin: 48px 0px 0px 63px;
+    }
+
+
+    .contact {
+        margin-top: 41px;
+    }
+
+    .left_introduction {
+        margin-left: 63px;
+    }
+}
+
+@media (max-width: 460px) {
+    .container {
+        max-width: 380px;
+    }
+
+    .info {
+        max-width: 456px;
+    }
+
+    .my_photo {
+        margin-left: 25px;
+    }
+
+    .left_introduction {
+        margin-left: 25px;
+    }
+}
+
+.animate {
+    display: none;
+}
+
+.animate.active {
+    display: block;
+    animation: animate 0.5s forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
