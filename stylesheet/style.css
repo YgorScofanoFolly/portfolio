@@ -26,6 +26,7 @@ body::-webkit-scrollbar-track {
 
 img {
     max-width: 100%;
+    max-height: 100%;
 }
 
 .container {
@@ -116,6 +117,10 @@ div.showH {
 }
 
 .secondary_menu {
+    display: none;
+}
+
+.menu_hamb {
     display: none;
 }
 
@@ -223,6 +228,9 @@ div.showH {
         display: none;
     }
     .secondary_menu {
+        display: block;
+    }
+    .menu_hamb {
         display: block;
     }
 }
