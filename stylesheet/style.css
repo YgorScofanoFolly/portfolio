@@ -4,11 +4,28 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #FEFEFE;
+    text-decoration: none;
+}
 
 body {
     background-color: #EFEFEF;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+}
+
+/* body::-webkit-scrollbar {
+    background: #335277;
+}
+
+body::-webkit-scrollbar-track {
+    background: #EFEFEF;
+    border: 1px solid #335277;
+} */
+
+img {
+    max-width: 100%;
 }
 
 .container {
@@ -45,6 +62,23 @@ body {
     list-style: none;
 }
 
+.manu_hamb {
+    position: relative;
+}
+
+.menu_open {
+    position: absolute;
+    display: none;
+    top: 51px;
+    right: 0px;
+    height: 80px;
+    background: #7193BB;
+}
+
+div.showH {
+    display: block;
+}
+
 .menu_item:first-child {
     margin-right: 28px;
 }
@@ -68,6 +102,7 @@ body {
 
 .left_introduction {
     margin-top: 86px;
+    text-align: right;
 }
 
 .intro_title {
@@ -80,9 +115,25 @@ body {
     margin: 0px;
 }
 
+.secondary_menu {
+    display: none;
+}
+
 .my_photo {
     width: 240px;
     height: 240px;
+}
+
+.links_menu {
+    list-style: none;
+    color: #FEFEFE;
+    width: 143px;
+    height: 80px;
+    margin: 0px;
+    padding: 15px 0px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .my_name {
@@ -110,15 +161,6 @@ body {
     color: #252525;
 }
 
-.banner {
-    background-image: url('../img_src/background/code.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 940px;
-    height: 293px;
-    margin: 136px auto 0px auto;
-}
-
 .holder_about {
     margin: 0px auto;
     max-width: 460px;
@@ -137,6 +179,12 @@ body {
 .arrow {
     vertical-align: text-top;
     float: right;
+}
+
+.banner {
+    margin-top: 136px;
+    display: flex;
+    justify-content: center;
 }
 
 .info {
@@ -159,16 +207,25 @@ body {
     color: #FEFEFE;
 }
 
+.selected {
+    color: #FFF;
+}
+
 .right {
     text-align: right;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 975px) {
     .container {
         min-width: 746px;
     }
+    .nav_menu {
+        display: none;
+    }
+    .secondary_menu {
+        display: block;
+    }
 }
-
 @media (max-width: 776px) {
     .container {
         min-width: calc(100vw - 30px);
@@ -181,11 +238,17 @@ body {
     .left_introduction {
         text-align: center;
     }
+    .copy {
+        text-align: right;
+    }
 }
 
 @media (max-width: 500px) {
     .menu {
         display: none;
+    }
+    .copy {
+        text-align: center;
     }
 }
 

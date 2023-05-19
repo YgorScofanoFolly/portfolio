@@ -23,4 +23,38 @@ window.onload = function() {
             arrowEvent.show(i);
         });
     });
+    let menuHidded = document.querySelector('.menu_hamb');
+    let menu = document.querySelector('.menu_open');
+    function showHide() {
+        this.show = function() {
+            menu.classList.toggle('showH');
+        };
+    };
+    let myFunction = new showHide();
+    menuHidded.addEventListener('click', function() {
+        myFunction.show();
+    });
+    let imgCode = document.querySelector('.code');
+    let imgDesktop = "img_src/vs_code/code_desk.png";
+    let imgTablet = "img_src/vs_code/code_tablet.png";
+    let imgMobile = "img_src/vs_code/code_mobile.png";
+    function ShowPictureScreenSize() {
+        if (window.innerWidth > 975) {
+            imgCode.setAttribute('src', imgDesktop);
+        } else if ((window.innerWidth < 975) && (window.innerWidth > 464)) {
+            imgCode.setAttribute('src', imgTablet);
+        } else {
+            imgCode.setAttribute('src', imgMobile);
+        }
+    };
+    ShowPictureScreenSize();
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 975) {
+            imgCode.setAttribute('src', imgDesktop);
+        } else if ((window.innerWidth < 975) && (window.innerWidth > 464)) {
+            imgCode.setAttribute('src', imgTablet);
+        } else {
+            imgCode.setAttribute('src', imgMobile);
+        }
+    });
 };
